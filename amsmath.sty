@@ -1,0 +1,12 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{amsmath}[2026/05/23 Minimal compatibility package]
+\newenvironment{align*}{\begin{eqnarray*}}{\end{eqnarray*}}
+\newenvironment{align}{\begin{eqnarray}}{\end{eqnarray}}
+\newenvironment{aligned}{\begin{array}{rcl}}{\end{array}}
+\newcommand{\text}[1]{\mbox{#1}}
+\newcommand{\dfrac}[2]{\displaystyle\frac{#1}{#2}}
+\newcommand{\tfrac}[2]{\textstyle\frac{#1}{#2}}
+\newcommand{\cfrac}[2]{\frac{#1}{#2}}
+\newcommand{\overset}[2]{\mathrel{\mathop{#2}^{#1}}}
+\newcommand{\underset}[2]{\mathrel{\mathop{#2}_{#1}}}
+\endinput

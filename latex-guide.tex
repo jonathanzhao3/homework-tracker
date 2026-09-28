@@ -1,0 +1,260 @@
+\documentclass{article}
+\title{Guide to the LaTeX Commands Supported by This Renderer}
+\author{Generated for the To Do LaTeX editor}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{How to Use This Guide}
+This document is a quick reference for the commands and environments that work well in your LaTeX preview. It focuses on the features that are supported by the renderer in this project, including document structure, text formatting, lists, tables, boxes, and math.
+
+Use inline math like $a^2+b^2=c^2$ and display math like
+\[
+\int_0^1 x^2\,dx = \frac{1}{3}.
+\]
+
+\section{Document Structure}
+These commands control the layout of a document.
+
+\title{My Document Title}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\subsection{Headings}
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\subsection{Reference Commands}
+You can label and reference parts of a document.
+
+\begin{equation}
+E = mc^2
+\label{eq:einstein}
+\end{equation}
+
+Equation~\ref{eq:einstein} is one of the most famous equations in physics.
+
+\section{Text Formatting}
+The renderer supports common text styling commands.
+
+\textbf{Bold text} looks stronger.
+\textit{Italic text} adds emphasis.
+\underline{Underlined text} highlights a phrase.
+\emph{Emphasised text} is useful in prose.
+\texttt{Monospace text} is good for code-like content.
+\textsc{Small caps} give a formal style.
+\textsf{Sans-serif text} changes the face.
+\textrm{Roman text} returns to a standard serif style.
+\textsl{Slanted text} leans slightly.
+\textup{Upright text} stays straight.
+
+You can also change colour with \textcolor{red}{red text} or highlight with \colorbox{yellow}{a coloured background}.
+
+\section{Font Sizes}
+The renderer also understands size commands.
+
+{\tiny Tiny text}\par
+{\small Small text}\par
+{\large Large text}\par
+{\Large Larger text}\par
+{\huge Huge text}\par
+
+\section{Lists}
+Bullet and numbered lists are supported.
+
+\subsection{Itemize}
+\begin{itemize}
+  \item First bullet
+  \item Second bullet
+  \item Third bullet
+\end{itemize}
+
+\subsection{Enumerate}
+\begin{enumerate}
+  \item First item
+  \item Second item
+  \item Third item
+\end{enumerate}
+
+\subsection{Description List}
+This renderer is strongest with itemize and enumerate lists, so the guide uses those for the main examples.
+
+\section{Tables}
+A simple table works with \texttt{tabular}.
+
+\begin{tabular}{lll}
+Topic & Example & Meaning \\
+\hline
+Algebra & $x+y$ & Addition \\
+Geometry & $\triangle ABC$ & A triangle \\
+Fractions & $\frac{a}{b}$ & Ratio \\
+\end{tabular}
+
+\section{Layout Commands}
+These commands help with spacing and page flow.
+
+A manual line break comes here.\\
+And the next line continues here.
+
+You can also use horizontal and vertical spacing such as \texttt{\string\bigskip}, \texttt{\string\medskip}, and \texttt{\string\smallskip}.
+
+\bigskip
+This line appears after a larger gap.
+
+\section{Boxes and Callouts}
+The renderer supports custom box environments for notes and theorems.
+
+\begin{box}{General Box}
+This is a simple framed box for important content.
+\end{box}
+
+\begin{boxdef}{Definition of a Function}
+A function is a rule that assigns each input exactly one output.
+\end{boxdef}
+
+\begin{boxnote}{Remember}
+Always check that your brackets are balanced.
+\end{boxnote}
+
+\begin{boxtheorem}{Basic Property}
+If a function is linear, then its graph is a straight line.
+\end{boxtheorem}
+
+\section{Inline Math}
+Inline math is written between dollar signs.
+
+The quadratic formula is $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$.
+
+You can also write vectors like $\vec{v}$, sets like $A \subseteq B$, and limits like $\lim_{x\to 0} \frac{\sin x}{x} = 1$.
+
+\section{Display Math}
+Display math is good for important equations.
+
+\begin{equation}
+\frac{d}{dx}(x^n)=n x^{n-1}
+\end{equation}
+
+\begin{equation*}
+\sum_{k=1}^{n} k = \frac{n(n+1)}{2}
+\end{equation*}
+
+\[
+\int_0^1 x^2\,dx = \frac{1}{3}
+\]
+
+\[
+\left(\begin{array}{cc}
+c & d
+\end{array}\right)
+\]
+
+\section{Aligned Equations}
+Use aligned environments for multi-line math.
+
+\begin{align*}
+(a+b)^2 &= (a+b)(a+b) \\
+        &= a^2 + 2ab + b^2
+\end{align*}
+
+\begin{gather*}
+x+y=z \\
+x-y=w
+\end{gather*}
+
+\begin{multline*}
+a+b+c+d+e+f+g \\
+= h+i+j
+\end{multline*}
+
+\section{Cases}
+Piecewise definitions work well with \texttt{cases}.
+
+\[
+f(x)=\begin{cases}
+x^2 & \text{if } x \ge 0 \\
+-x & \text{if } x < 0
+\end{cases}
+\]
+
+\section{Matrices}
+Matrix environments render as expected.
+
+\[
+A = \begin{matrix}
+1 & 2 \\
+3 & 4
+\end{matrix}
+\qquad
+B = \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\]
+
+\[
+C = \begin{bmatrix}
+5 & 6 \\
+7 & 8
+\end{bmatrix}
+\qquad
+D = \begin{vmatrix}
+1 & 2 \\
+3 & 4
+\end{vmatrix}
+\]
+
+\section{Useful Math Commands}
+Here are some of the most useful commands in the renderer.
+
+Fractions: $\frac{a}{b}$, $\dfrac{a}{b}$, $\tfrac{a}{b}$, $\cfrac{a}{b}$, $\binom{n}{k}$.
+
+Roots: $\sqrt{x}$ and $\sqrt[n]{x}$.
+
+Superscripts and subscripts: $x^2$, $x_i$, $x_i^2$, $a^{m+n}$.
+
+Accents: $\hat{x}$, $\bar{x}$, $\vec{x}$, $\dot{x}$, $\ddot{x}$, $\tilde{x}$, $\widehat{ABC}$, $\widetilde{ABC}$, $\overline{AB}$.
+
+Operators: $\sum$, $\prod$, $\int$, $\iint$, $\iiint$, $\oint$, $\bigcup$, $\bigcap$.
+
+Functions: $\sin x$, $\cos x$, $\tan x$, $\log x$, $\ln x$, $\max x$, $\min x$, $\lim_{x\to 0}$.
+
+Relations and sets: $a\leq b$, $a\geq b$, $a\neq b$, $A \in B$, $A \subseteq B$, $A \supseteq B$, $A \cup B$, $A \cap B$.
+
+Arrows: $A \to B$, $A \leftarrow B$, $A \Rightarrow B$, $A \Leftrightarrow B$.
+
+Logic: $\forall x$, $\exists x$, $P \land Q$, $P \lor Q$, $P \implies Q$, $P \iff Q$.
+
+Greek letters: $\alpha$, $\beta$, $\gamma$, $\delta$, $\theta$, $\lambda$, $\mu$, $\pi$, $\sigma$, $\omega$.
+
+Special symbols: $\infty$, $\partial$, $\nabla$, $\angle$, $\triangle$, $\square$, $\dagger$, $\ddagger$, $\heartsuit$.
+
+\section{Special Text in Math}
+Text inside math can be made normal with \texttt{\text{}}.
+
+\[
+\text{Speed} = \frac{\text{distance}}{\text{time}}
+\]
+
+You can also use \mathrm{d}x for upright differential notation.
+
+\section{Mixed Examples}
+A compact summary can combine text and math.
+
+\begin{enumerate}
+  \item A function can be written as $f(x)=x^2$.
+  \item A sum can be written as $\sum_{k=1}^{n} k$.
+  \item A matrix can be written as $\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}$.
+\end{enumerate}
+
+\begin{quote}
+The goal of good LaTeX is not just correctness, but clarity.
+\end{quote}
+
+\section{Closing Notes}
+If you want this guide to grow, add more examples for the commands you use most often. The safest patterns for this renderer are simple document structure, standard math environments, and straightforward text formatting.
+
+\end{document}
